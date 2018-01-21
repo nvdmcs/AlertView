@@ -35,8 +35,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func alertActionPressed(_ sender: UIButton) {
-          alertView(title: "Do You like tea", message: "YES OR NO") // ali bajwa
-          alertView(title: "Do You like Tea", message: "YES OR NO")
+          alertView(title: "Do You like tea", message: "YES OR NO") // ali Naveed
+          // this is more improve version of commit style
     }
     
 
