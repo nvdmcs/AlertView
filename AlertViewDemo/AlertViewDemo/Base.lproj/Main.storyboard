@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="saq-oy-JBx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="saq-oy-JBx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -52,15 +52,33 @@
                                     <action selector="responseAlertPressed:" destination="saq-oy-JBx" eventType="touchUpInside" id="dzE-PD-519"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AM8-1l-tZY">
+                                <rect key="frame" x="16" y="256" width="343" height="33"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="Hr7-62-kfg"/>
+                                    <constraint firstAttribute="width" constant="343" id="bX5-1D-5xb"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33" id="mF5-EQ-27f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Response AlertView -reUseCode">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="alertResonseReuse:" destination="saq-oy-JBx" eventType="touchUpInside" id="oHq-Wl-kej"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="gtC-eb-YRv" firstAttribute="trailing" secondItem="Wrx-oQ-D6G" secondAttribute="trailing" constant="16" id="QAw-fQ-Twv"/>
                             <constraint firstItem="Wrx-oQ-D6G" firstAttribute="top" secondItem="gtC-eb-YRv" secondAttribute="top" constant="59" id="ayY-Y0-9Dn"/>
                             <constraint firstItem="Rxa-bq-MoF" firstAttribute="top" secondItem="Wrx-oQ-D6G" secondAttribute="bottom" constant="76" id="eJS-5v-X3Z"/>
+                            <constraint firstItem="AM8-1l-tZY" firstAttribute="leading" secondItem="gtC-eb-YRv" secondAttribute="leading" constant="16" id="fPR-fe-eLm"/>
                             <constraint firstItem="gtC-eb-YRv" firstAttribute="trailing" secondItem="Rxa-bq-MoF" secondAttribute="trailing" constant="16" id="flU-aK-eWd"/>
                             <constraint firstItem="Wrx-oQ-D6G" firstAttribute="leading" secondItem="gtC-eb-YRv" secondAttribute="leading" constant="16" id="n3a-Px-cNw"/>
                             <constraint firstItem="Rxa-bq-MoF" firstAttribute="leading" secondItem="gtC-eb-YRv" secondAttribute="leading" constant="16" id="oE7-uE-Dqm"/>
+                            <constraint firstItem="AM8-1l-tZY" firstAttribute="top" secondItem="Rxa-bq-MoF" secondAttribute="bottom" constant="35" id="tIm-8p-RdI"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gtC-eb-YRv"/>
                     </view>

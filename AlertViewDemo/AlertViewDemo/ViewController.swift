@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
+       
      
     }
 
@@ -20,21 +23,37 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+   
+    @IBAction func alertResonseReuse(_ sender: Any) {
+        
+        
+        if(alertViewResponse(title: "Alert", message: "This is bla bla message")){
+            print("Control your response here is Yes Button pressed")
+        }
+        
+    }
     
+    @IBAction func alertActionPressed(_ sender: UIButton) {
+    
+          simpleAlertView(title: "2 + 2 = 4", message: "") // ali bajwa
+  }
+  
+    @IBAction func responseAlertPressed(_ sender: UIButton) {
+        
+      responseAlertView(title: "Do you like pizza", message: "YES or No")
+       
+    }
+
+    // AlerView Functions with parameters 
     func simpleAlertView(title: String , message: String) {
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
-        //This is New lime
         alertController.addAction(ok)
-   //     alertController.addAction(yes)
         
         present(alertController, animated: true, completion: nil)
     }
-    
-    @IBAction func alertActionPressed(_ sender: UIButton) {
-          alertView(title: "Do You like tea", message: "YES OR NO") // ali Naveed
-          // this is more improve version of commit style
+    //update Please-controller name + yourCustomName
     func responseAlertView(title: String , message: String) {
         
         let alertCotroller = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -47,18 +66,22 @@ class ViewController: UIViewController {
         alertCotroller.addAction(no)
         present(alertCotroller, animated: true, completion: nil)
     }
-    
-    @IBAction func alertActionPressed(_ sender: UIButton) {
+    //Reusable AlertView with Bool Response
+    func alertViewResponse(title: String , message: String) -> Bool{
         
-          simpleAlertView(title: "2 + 2 = 4", message: "") // ali bajwa
-
-  }
-  
-    @IBAction func responseAlertPressed(_ sender: UIButton) {
-        
-      responseAlertView(title: "Do you like pizza", message: "YES or No")
-       
+        var isTrue:Bool = false;
+        let alertCotroller = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let yes = UIAlertAction(title: "YES", style: .default) { (responseAction) in
+           isTrue = true
+        }
+        let no = UIAlertAction(title: "NO", style: .default, handler: nil)
+        alertCotroller.addAction(yes)
+        alertCotroller.addAction(no)
+        present(alertCotroller, animated: true, completion: nil)
+        return isTrue;
     }
+    
+    
     
     
     
