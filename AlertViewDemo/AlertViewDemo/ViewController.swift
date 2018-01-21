@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func alertActionPressed(_ sender: UIButton) {
-          alertView(title: "Do You like pizza", message: "YES OR NO")
+          alertView(title: "Do You like tea", message: "YES OR NO") // ali bajwa
     }
     
 
