@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let yes = UIAlertAction(title: "YES", style: .cancel, handler: nil)
-        let no = UIAlertAction(title: "NO", style: .default, handler: nil)
+        let no = UIAlertAction(title: "YES", style: .default, handler: nil)
         
         alertController.addAction(no)
         alertController.addAction(yes)
