@@ -26,8 +26,8 @@ class ViewController: UIViewController {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         let yes = UIAlertAction(title: "YES", style: .cancel, handler: nil)
-        let no = UIAlertAction(title: "YES", style: .default, handler: nil)
-        
+        let no = UIAlertAction(title: "No", style: .default, handler: nil)
+        //This is New lime
         alertController.addAction(no)
         alertController.addAction(yes)
         
@@ -35,7 +35,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func alertActionPressed(_ sender: UIButton) {
-          alertView(title: "Do You like pizza", message: "YES OR NO")
+          alertView(title: "Do You like Tea", message: "YES OR NO")
     }
     
 
