@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="saq-oy-JBx">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,30 +9,109 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="deY-LY-VDI">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AlertViewDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="saq-oy-JBx" customClass="ViewController" customModule="AlertViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c4u-ck-t4q">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Mh-bp-HYY">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrx-oQ-D6G">
+                                <rect key="frame" x="16" y="79" width="343" height="33"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="dkR-by-M3y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Simple Alert View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="alertActionPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJJ-hb-cZH"/>
+                                    <action selector="alertActionPressed:" destination="saq-oy-JBx" eventType="touchUpInside" id="WLh-ny-dDy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxa-bq-MoF">
+                                <rect key="frame" x="16" y="188" width="343" height="33"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="d7d-nK-5Uu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <state key="normal" title="Response Alert View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="responseAlertPressed:" destination="saq-oy-JBx" eventType="touchUpInside" id="dzE-PD-519"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="gtC-eb-YRv" firstAttribute="trailing" secondItem="Wrx-oQ-D6G" secondAttribute="trailing" constant="16" id="QAw-fQ-Twv"/>
+                            <constraint firstItem="Wrx-oQ-D6G" firstAttribute="top" secondItem="gtC-eb-YRv" secondAttribute="top" constant="59" id="ayY-Y0-9Dn"/>
+                            <constraint firstItem="Rxa-bq-MoF" firstAttribute="top" secondItem="Wrx-oQ-D6G" secondAttribute="bottom" constant="76" id="eJS-5v-X3Z"/>
+                            <constraint firstItem="gtC-eb-YRv" firstAttribute="trailing" secondItem="Rxa-bq-MoF" secondAttribute="trailing" constant="16" id="flU-aK-eWd"/>
+                            <constraint firstItem="Wrx-oQ-D6G" firstAttribute="leading" secondItem="gtC-eb-YRv" secondAttribute="leading" constant="16" id="n3a-Px-cNw"/>
+                            <constraint firstItem="Rxa-bq-MoF" firstAttribute="leading" secondItem="gtC-eb-YRv" secondAttribute="leading" constant="16" id="oE7-uE-Dqm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gtC-eb-YRv"/>
+                    </view>
+                    <connections>
+                        <segue destination="fj5-5B-XLj" kind="show" identifier="SecondVC" id="3cn-O8-9Ob"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncr-YG-6DF" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-386" y="132"/>
+        </scene>
+        <!--SecondVC-->
+        <scene sceneID="beC-8A-Lxo">
+            <objects>
+                <viewController id="fj5-5B-XLj" customClass="SecondVC" customModule="AlertViewDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lyo-wT-mVg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="ClX-Lg-UTL">
+                                <rect key="frame" x="16" y="200" width="343" height="215"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="xNT-fH-MWc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Pizza" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3sJ-Jw-rj4">
+                                <rect key="frame" x="75" y="463" width="224" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="23"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YjE-7A-yT2" firstAttribute="trailing" secondItem="ClX-Lg-UTL" secondAttribute="trailing" constant="16" id="4Og-oN-1cr"/>
+                            <constraint firstItem="YjE-7A-yT2" firstAttribute="trailing" secondItem="3sJ-Jw-rj4" secondAttribute="trailing" constant="76" id="AVV-M9-Fzk"/>
+                            <constraint firstItem="ClX-Lg-UTL" firstAttribute="leading" secondItem="YjE-7A-yT2" secondAttribute="leading" constant="16" id="Lc5-PP-h8f"/>
+                            <constraint firstItem="3sJ-Jw-rj4" firstAttribute="leading" secondItem="YjE-7A-yT2" secondAttribute="leading" constant="75" id="bvJ-EH-kkN"/>
+                            <constraint firstItem="3sJ-Jw-rj4" firstAttribute="top" secondItem="ClX-Lg-UTL" secondAttribute="bottom" constant="48" id="ciO-pO-JkE"/>
+                            <constraint firstItem="YjE-7A-yT2" firstAttribute="bottom" secondItem="3sJ-Jw-rj4" secondAttribute="bottom" constant="183" id="diq-k4-dFx"/>
+                            <constraint firstItem="ClX-Lg-UTL" firstAttribute="top" secondItem="YjE-7A-yT2" secondAttribute="top" constant="180" id="rbh-zf-sMB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YjE-7A-yT2"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HdL-nj-UNU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="296.80000000000001" y="131.78410794602701"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pizza" width="316" height="159"/>
+    </resources>
 </document>
